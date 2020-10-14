@@ -12,6 +12,7 @@ The artists table contains the artist id, name, location, latitude and longitude
 The songs table contains the song id, title, artist id, year and duration. The song id(varchar is the primary key and thus can not be null and must be unique. The title(varchar) is the name of the song and can not be null since the title should be provided when creating a new song id. The artist_id (varchar), year(integer) and duration(decimal) can be null and is not a required field when inserting data into the songs table. 
 The times table contains the start time, hour, day, week, month, year and weekday. The start time is a timestamp and is the primary key of the times table. The hour, day, week, month, year, weekday are all integers and can not be null since they can be extracted from the start time and allow for the data to be more versatile and easily accessible. 
 
+![alt text](https://github.com/vguadalu/udacity-data_warehouse/blob/main/Sparkify%20Star%20Schema.jpeg)
 ### ETL
 The data files for the database are stored in S3 buckets. The data was extracted by placing all the data from the song and log data sets in staging tables. Once all the data was in the songs and logs staging tables, the desired data for each table in the star schema was populated by using an INSERT query from the staging tables.
 
